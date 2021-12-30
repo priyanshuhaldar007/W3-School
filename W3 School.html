@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>W3 School</title>
+   <style>
+       *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       body{
+           overflow-x: hidden;
+       }
+       .navbar{
+           position: relative;
+           width: 100vw;
+           height: 65px;
+           /* background-color: wheat; */
+       }
+       .navbar .left li{
+           list-style-type: none;
+           display: inline-block;
+           /* margin-left: 15px;
+           margin-right: 15px; */
+       }
+       .navbar .left li:hover{
+           cursor: pointer;
+           background-color: green;
+           color: white;
+       }
+       .navbar .left li p{
+           padding: 25px 20px 24px 20px;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           font-weight: 400;
+           font-size: 20px;
+       }
+       .navbar .left{
+           margin-left: 100px;
+           margin-top: -56px;
+           width: 500px;
+       }
+       .logo img{
+           height: 40px;
+           width: 40px;
+           margin-left: 30px;
+           margin-top: 10px;
+       }
+       .navbar .right{
+           margin-top: -55px;
+           margin-left: 700px;
+           list-style-type: none;
+       }
+       
+       .navbar .right li{
+           display: inline-block;
+       }
+       .navbar .right li p{
+           margin-left: 10px;
+           margin-right: 10px;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           font-weight: 500;
+           font-size: 18px;
+       }
+       .lgin{
+            padding: 10px 20px 10px 20px;
+            border-radius: 25px;
+            background-color: rgb(72, 122, 72);
+            color: white;
+       }
+       .lgin:hover{
+           cursor: pointer;
+           background-color: green;
+           color: white;
+       }
+       .web{
+            padding: 10px 20px 10px 20px;
+            border-radius: 25px;
+            background-color: rgb(125, 223, 125);
+       }
+       .web:hover{
+           cursor: pointer;
+           background-color: green;
+           color: white;
+       }
+       .paid{
+            padding: 10px 20px 10px 20px;
+       }
+       .paid:hover{
+           cursor: pointer;
+           background-color: rgb(72, 122, 72);
+           border-radius: 25px;
+           color: white;
+       }
+       .right li i{
+           padding: 10px;
+       }
+       .right li i:hover{
+           color: rgb(64, 138, 64);
+           cursor: pointer;
+       }
+       .html{
+           position: relative;
+           height: 520px;
+           width: 100vw;
+           background-color: rgb(15, 12, 63);
+       }
+       
+       .header{
+           margin-left: 200px;
+           padding-top: 50px;
+           font-size: 100px;
+           font-weight: bolder;
+           font-family: sans-serif;
+           color:white;
+       }
+       .line{
+           margin-left: 160px;
+           padding-top: 20px;
+           font-size: 20px;
+           font-weight: bolder;
+           font-family: sans-serif;
+           color: white;
+       }
+       .lh{
+           margin-left: 230px;
+           margin-top: 25px;
+           font-size: 20px;
+           font-weight: 500;
+           font-family: sans-serif;
+           padding: 10px 15px 10px 15px;
+           border-radius: 25px;
+           height: 40px;
+           width: 200px;
+           background-color: rgb(72, 150, 72);
+           text-align: center;
+           color: white;
+       }
+       .lh:hover{
+           cursor: pointer;
+           background-color: rgb(72, 122, 72);
+       }
+       .vt{
+           margin-left: 230px;
+           margin-top: 25px;
+           font-size: 20px;
+           font-weight: 500;
+           font-family: sans-serif;
+           padding: 10px 15px 10px 15px;
+           border-radius: 25px;
+           height: 40px;
+           width: 200px;
+           background-color: rgb(203, 231, 109);
+           text-align: center;
+       }
+       .vt:hover{
+           cursor: pointer;
+           background-color: rgb(156, 173, 58);
+       }
+       .rh{
+           margin-left: 230px;
+           margin-top: 25px;
+           font-size: 20px;
+           font-weight: 500;
+           font-family: sans-serif;
+           padding: 10px 15px 10px 15px;
+           border-radius: 25px;
+           height: 40px;
+           width: 200px;
+           background-color: rgb(217, 235, 217);
+           text-align: center;
+       }
+       .rh:hover{
+           cursor: pointer;
+           background-color: rgb(180, 207, 175);
+       }
+       .example1{
+           margin-top: -460px;
+           margin-left: 680px;
+           height: 400px;
+           width: 550px;
+           position: absolute;
+           background-color: rgb(222, 239, 241);
+           border-radius: 5px;
+       }
+       .example1 p{
+           font-family: sans-serif;
+           padding: 10px 10px;
+           font-size: 20px;
+           font-weight: bold;
+       }
+       .example1 img{
+           height: 300px;
+           width: 530px;
+           padding: 10px;
+       }
+       .example1 .bt{
+           padding: 10px 20px 10px 20px;
+           border-radius: 25px;
+           background-color: rgb(72, 150, 72);
+           width: 250px;
+           text-align: center;
+           margin-left: 10px;
+           color: white;
+       }
+       .example1 .bt:hover{
+           cursor: pointer;
+           background-color: rgb(52, 112, 52)
+       }
+       .css{
+           position: relative;
+           height: 520px;
+           width: 100vw;
+           background-color: rgb(218, 231, 217);
+       }
+       .headerc{
+           margin-left: 200px;
+           padding-top: 50px;
+           font-size: 100px;
+           font-weight: bolder;
+           font-family: sans-serif;
+       }
+       .linec{
+           margin-left: 160px;
+           padding-top: 20px;
+           font-size: 20px;
+           font-weight: bolder;
+           font-family: sans-serif;
+       }
+       .lc{
+           margin-left: 210px;
+           margin-top: 25px;
+           font-size: 20px;
+           font-weight: 500;
+           font-family: sans-serif;
+           padding: 10px 15px 10px 15px;
+           border-radius: 25px;
+           height: 40px;
+           width: 200px;
+           background-color: rgb(72, 150, 72);
+           text-align: center;
+           color: white;
+       }
+       .lc:hover{
+           cursor: pointer;
+           background-color: rgb(72, 122, 72);
+       }
+       .rc{
+           margin-left: 210px;
+           margin-top: 25px;
+           font-size: 20px;
+           font-weight: 500;
+           font-family: sans-serif;
+           padding: 10px 15px 10px 15px;
+           border-radius: 25px;
+           height: 40px;
+           width: 200px;
+           background-color: rgb(14, 16, 41);
+           text-align: center;
+           color: white;
+       }
+       .rc:hover{
+           cursor: pointer;
+           background-color: rgb(8, 9, 36);
+       }
+       .example2{
+           margin-top: -460px;
+           margin-left: 680px;
+           height: 400px;
+           width: 550px;
+           position: absolute;
+           background-color: rgb(222, 239, 241);
+           border-radius: 5px;
+       }
+       .example2 p{
+           font-family: sans-serif;
+           padding: 10px 10px;
+           font-size: 20px;
+           font-weight: bold;
+       }
+       .example2 img{
+           height: 300px;
+           width: 530px;
+           padding: 10px;
+       }
+       .example2 .bt{
+           padding: 10px 20px 10px 20px;
+           border-radius: 25px;
+           background-color: rgb(72, 150, 72);
+           width: 250px;
+           text-align: center;
+           margin-left: 10px;
+           color: white;
+       }
+       .example2 .bt:hover{
+           cursor: pointer;
+           background-color: rgb(52, 112, 52)
+       }
+   </style> 
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="D:\Coding\Web Development\W3 School\w3.png"></div>
+        <ul class="left">
+            <li><p>Turtorials</p></li>
+            <li><p>References</p></li>
+            <li><p>Exercise</p></li>
+            <li><p>Videos</p></li>
+        </ul>
+        <ul class="right">
+            <li><i class="fas fa-circle"></i></li>
+            <li><i class="fas fa-globe-americas"></i></li>
+            <li><i class="fas fa-search"></i></li>
+            <li><p class="web">Website</p></li>
+            <li><p class="paid">Paid Courses</p></li>
+            <li><p class="lgin">Log in</p></li>
+        </ul>
+    </div>
+    <div class="html">
+        <p class="header">HTML</p>
+        <p class="line">The language for building web pages</p>
+        <p class="lh">Learn HTML</p>
+        <p class="vt">Video Tutorial</p>
+        <p class="rh">HTML Reference</p>
+    </div>
+    <div class="example1">
+        <p>HTML Example: </p>
+        <img src="D:\Coding\Web Development\W3 School\html.png">
+        <p class="bt">Try it Yourself</p>
+    </div>
+    <div class="css">
+        <p class="headerc">CSS</p>
+        <p class="linec">The language for styling web pages</p>
+        <p class="lc">Learn CSS</p>
+        <p class="rc">CSS Reference</p>
+    </div>
+    <div class="example2">
+        <p>CSS Example: </p>
+        <img src="D:\Coding\Web Development\W3 School\css.png">
+        <p class="bt">Try it Yourself</p>
+    </div>
+</body>
+</html>
